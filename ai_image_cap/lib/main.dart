@@ -49,7 +49,7 @@ class _CaptionHomeState extends State<CaptionHome> {
     final response = await http.post(
       Uri.parse('https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-base'),
       headers: {
-        'Authorization': 'Bearer YOUR_HF_API_KEY',
+        'Authorization': 'Bearer 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',
         'Content-Type': 'application/octet-stream',
       },
       body: imageBytes,

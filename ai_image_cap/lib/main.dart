@@ -47,9 +47,9 @@ class _CaptionHomeState extends State<CaptionHome> {
 
     // Example: Call Hugging Face Inference API (replace with your token)
     final response = await http.post(
-      Uri.parse('https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-base'),
+      Uri.parse('https://api-inference.huggingface.co/models/nlpconnect/vit-gpt2-image-captioning'),
       headers: {
-        'Authorization': 'Bearer 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',
+        'Authorization': 'Bearer ...',
         'Content-Type': 'application/octet-stream',
       },
       body: imageBytes,
@@ -59,8 +59,10 @@ class _CaptionHomeState extends State<CaptionHome> {
       final result = jsonDecode(response.body);
       setState(() => caption = result[0]['generated_text']);
     } else {
-      setState(() => caption = 'Failed to generate caption.');
-    }
+       print("Error: ${response.statusCode}");
+        print("Body: ${response.body}");
+        setState(() => caption = 'Failed to generate caption. (${response.statusCode})');
+      }
 
     setState(() => loading = false);
   }

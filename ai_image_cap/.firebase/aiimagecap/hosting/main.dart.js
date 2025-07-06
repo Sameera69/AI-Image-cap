@@ -37669,7 +37669,7 @@ while(true)switch(s){case 0:if(p.d==null){s=1
 break}p.ao(new A.ZD(p))
 o=A.f4("https://api-inference.huggingface.co/models/nlpconnect/vit-gpt2-image-captioning")
 n=t.N
-n=A.aN(["Authorization","Bearer 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","Content-Type","application/octet-stream"],n,n)
+n=A.aN(["Authorization","Bearer ...","Content-Type","application/octet-stream"],n,n)
 s=3
 return A.W(A.aru(o,p.d,n),$async$nP)
 case 3:m=b
